@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {    
+    background: #fff;
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vmin;
+    line-height: 5vmin;
+}
+
+section {    
+    position: relative;
+    padding: 5vmin 0 5vmin;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
+h1 {
+    margin: 5vmin 0 2vmin;
+}
+
+.about li {
+    display: inline-block;
+    padding: 2vmin 4vmin;
+    margin: 1vmin;
+    background: var(--bg);
+    color: #fff;
+    border-radius: 15%;
+    list-style-type: none;    
+}
+
+.projects li {
+    display: inline-block;
+    padding: 2vmin;
+    margin: 1vmin;
+    background: var(--bg);
+    color: #fff;
+    border-radius: 5%;
+    list-style-type: none;    
+}
+
+.projects li a {
+    display: block;
+}
+
+.projects li span {
+    background: var(--bg-light);
+    padding: .5vmin;
+    margin: .25vmin;
+    font-size: 2vmin;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.me {
+    position: absolute;
+    color: #fff;
+    right: 10vmin;
+    top: 40vmin;
+    font-size: 2em;
+    line-height: 1.5em;
+    z-index: 1;
+    text-shadow: 0.5vmin 0.5vmin .25vmin #111;
+    transition: .5s ease-out;
+}
+
+.contact {
+    position: absolute;
+    top: 23vmin;    
+    z-index: 1;
+}
+
+.contact span {
+    display: block;
+}
+
+span a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (max-width: 1140px) {
+    .me {
+        font-size: 1.75em;
+        right: 2vmin;
+    }
+}
+
+
+@media screen and (max-width: 1020px) {
+    .me {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .me {
+        top: 2vmin;      
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .me {
+        font-size: 1.75em;
+        top: 5vmin;        
+        right: 15vmin;
+    }
+}

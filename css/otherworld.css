@@ -1,0 +1,159 @@
+.canvas-2 {
+    background: var(--bg-2);
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation: bg 70s infinite;
+}
+
+@keyframes bg {
+    80% { background: #81acd5; }
+    100% { background: var(--bg-2); }
+}
+
+.canvas-2 .fumes{
+    top: -13vmin;
+    z-index: 1;
+}
+
+.mountain {
+    position: absolute;
+    bottom: 0vmin;
+    width: 40vmin;    
+    height: 10vmin;
+    border-left: 40vmin solid transparent;
+    border-bottom: 40vmin solid var(--mountain-l);    
+}
+
+.mountain::after {
+    content: '';
+    position: absolute;
+    width: 40vmin;    
+    height: 10vmin;
+    border-right: 40vmin solid transparent;
+    border-bottom: 40vmin solid var(--mountain-r);    
+}
+
+.mountain::before {
+    content: '';
+    position: absolute;
+    top: 0vmin;
+    left: -12vmin;
+    width: 24vmin;
+    height: 18vmin;
+    background: var(--mountain-t);
+    clip-path: polygon(0% 66%, 50% 0, 99% 63%, 93% 70%, 81% 63%, 71% 71%, 56% 48%, 54% 61%, 41% 55%, 34% 68%, 23% 59%, 10% 73%);
+    z-index: 1;
+}
+
+.mountain-left {
+    left: -2vmin;
+    bottom: -5vmin;
+}
+
+.mountain-center {
+    left: 30vmin;
+    bottom: -15vmin;
+}
+
+.mountain-center-2 {
+    left: 70vmin;
+}
+
+.mountain-right {
+    left: 95vmin;
+    bottom: -18vmin;
+}
+
+.forest {
+    z-index: 2;
+}
+
+.evergreen {
+    position: absolute;
+    width: 10vmin;
+    height: 5vmin;    
+    bottom: 5vmin;
+    border-right: 5vmin solid transparent;
+    border-left: 5vmin solid transparent;    
+    border-bottom: 8vmin solid var(--tree-b);
+    z-index: -1;
+}
+
+.evergreen::after {
+    content: '';    
+    position: absolute;
+    width: 10vmin;
+    height: 5vmin;    
+    bottom: -6vmin;
+    left: -5vmin;
+    border-right: 5vmin solid transparent;
+    border-left: 5vmin solid transparent;    
+    border-bottom: 8vmin solid var(--tree-t);
+    z-index: -1;
+}
+
+.evergreen::before {
+    content: '';    
+    position: absolute;
+    width: 2.5vmin;
+    height: 8vmin;    
+    bottom: -16vmin;
+    left: -1.25vmin;
+    background: #405931;
+}
+
+.evergreen:nth-of-type(1) {
+    right: 10vmin;
+}
+.evergreen:nth-of-type(2) {
+    right: 25vmin;
+}
+.evergreen:nth-of-type(3) {
+    right: 40vmin;
+}
+.evergreen:nth-of-type(4) {
+    right: 55vmin;
+}
+.evergreen:nth-of-type(5) {
+    right: 70vmin;
+}
+
+.sun {  
+    position: absolute;
+    width: 20vmin;
+    height: 20vmin;    
+    bottom: 30vmin;
+    left: -20vmin;
+    background: var(--sun);
+    border-radius: 50%;
+    animation: sunrise 100s infinite;    
+}
+
+@keyframes sunrise {
+    100% { transform: translate(220vmin, -60vmin); }    
+}
+
+.birds {
+    position: absolute;
+    width: 2vmin;
+    height: .25vmin;    
+    bottom: 50vmin;
+    right: -10vmin;
+    background: #444;
+    box-shadow: 10vmin 10vmin #444,
+                50vmin 5vmin #444,
+                70vmin 1vmin #444,
+                90vmin 12vmin #444,
+                110vmin 2vmin #444,
+                120vmin 10vmin #444;
+    animation: flying-birds 30s infinite alternate;
+}
+
+@keyframes flying-birds {
+    100% { transform: translate(-420vmin); }    
+}
